@@ -3,7 +3,8 @@ import * as actions from "./actions";
 import { LOGIN } from "./constants";
 
 
-function* loginActon() {
+
+function* loginActon(data) {
     const success = { success:"login success"};
     yield delay(2000);
     yield put(actions.loginSuccess(success));

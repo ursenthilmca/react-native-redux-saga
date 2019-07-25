@@ -7,9 +7,6 @@ const defaultState = {
 export default (prevState = defaultState, action) => {
     switch (action.type) {
         case LOGIN:
-            console.log('====================================');
-            console.log("====> reducer");
-            console.log('====================================');
             return {
                 ...defaultState,
                 isLoading:true

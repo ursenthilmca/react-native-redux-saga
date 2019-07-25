@@ -1,11 +1,9 @@
 import { LOGIN, LOGIN_SUCCESS, LOGIN_FAILURE } from "./constants";
 
-export function login() {
-    console.log('====================================');
-    console.log("====> action");
-    console.log('====================================');
+export function login(data) {
     return {
-        type:LOGIN
+        type:LOGIN,
+        data
     }
 }
 

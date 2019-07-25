@@ -13,15 +13,8 @@ import { bindActionCreators } from "redux";
 import * as actions from "./actions";
 import Indicator from "../../components/activity-indicator"
 
-const lockIcon = require("./lock.png");
-const personIcon = require("./person.png");
-
 class Login extends Component {
     
-    componentDidMount(){
-       this.props.actions.login();
-    }
-
     constructor(props) {
         super(props);
         this.state = {
@@ -50,12 +43,13 @@ class Login extends Component {
 
     onLogin = () => {
         if (this.isValid()) {
-            
+            const { username, password } = this.state;
+            this.props.actions.login({username, password});
         }
     }
 
     onClickListener = (viewId) => {
-        Alert.alert("Alert", "Button pressed " + viewId);
+       // Alert.alert("Alert", "Button pressed " + viewId);
     }
 
 
