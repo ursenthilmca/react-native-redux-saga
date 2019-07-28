@@ -1,2 +1,4 @@
 # react-native-redux-saga
-1. Redux saga implementation in react native
+
+# create the react native project using command line 
+ create-react-native-app init login
